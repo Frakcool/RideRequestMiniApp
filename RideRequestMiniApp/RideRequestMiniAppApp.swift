@@ -11,7 +11,8 @@ import SwiftUI
 struct RideRequestMiniAppApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            let vm = RideRequestViewModel(origin: "", destination: "", networkService: RideRequestNetworkService())
+            ContentView(viewModel: vm)
         }
     }
 }
